@@ -147,3 +147,9 @@ def create_gui():
 
 # Executa a interface gráfica
 create_gui()
+
+def is_running_on_server():
+    return os.environ.get("RENDER") is not None
+
+if not is_running_on_server():
+    create_gui()  # Só cria a GUI se não estiver no servidor
