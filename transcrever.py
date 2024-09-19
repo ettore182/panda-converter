@@ -145,11 +145,11 @@ def create_gui():
     # Inicia a interface
     root.mainloop()
 
-# Executa a interface gráfica
-create_gui()
+import os
 
 def is_running_on_server():
     return os.environ.get("RENDER") is not None
 
+# Só chamar a GUI se o código não estiver no servidor
 if not is_running_on_server():
-    create_gui()  # Só cria a GUI se não estiver no servidor
+    create_gui()
