@@ -1,5 +1,5 @@
 from flask import Flask, request, render_template
-from transcrever import transcrever_audio  # Importe sua função de transcrição
+from transcricao import transcrever_audio  # Importe sua função de transcrição
 
 app = Flask(__name__)
 
